@@ -1,0 +1,222 @@
+:root {
+	--purple: #512062; 
+	--white: #fff;
+	--black: #000;
+	--gray: #EAFFDA;
+	--button: #D81E5B;
+	--selection: #9b489a;
+	--title: cyan;
+	--shadow: #c22557;
+}
+
+
+html, body {
+	padding: 6px;
+  }
+  
+  body {
+	background-color: var(--purple);
+ }
+
+  *,
+  *:before,
+  *:after {
+	 box-sizing: inherit;
+	}
+  
+  .main-title {
+	color: var(--white);
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	letter-spacing: 4px;
+	font-size: 60px;
+	text-transform: uppercase;
+	margin: 20px auto;
+	text-align: center;
+  }
+  .main-title::selection {
+	background-color: var(--selection);
+  }
+  .meme-container {
+	box-sizing: content-box;
+	border: 15px solid var(--white); 
+	background-image: url(http://i0.kym-cdn.com/photos/images/newsfeed/000/674/934/422.jpg);
+	background-size: 100% 100%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-color: var(--white);
+	width: 600px;
+	max-width: 600px;
+	height: 480px;
+	margin-left: auto;
+	margin-right: auto;
+	position: absolute;
+  }
+  
+  .meme-text {
+	font-family: 'Oswald', sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-shadow: 2px 2px var(--black), -2px -2px var(--black), 2px -2px var(--black), -2px 2px var(--black);
+	margin-top: 0;
+	margin-bottom: 0;
+	text-align: center;
+	color: var(--branco);
+	font-size: 46px;
+	position: absolute;
+	width: 100%;
+  }
+  
+  .top-text {
+	top: 0;
+  }
+  .bot-text {
+	bottom: 0;
+  }
+  
+  .canvas-container {
+	margin: auto;
+	border: 15px solid var(--white);
+	box-sizing: content-box;
+	width: 600px;
+	height: 480px;
+	}
+
+  .meme-form {
+	margin-top: 20px;
+	max-width: 400px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	color: var(--white);
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 18px;
+  }
+  .meme-form label::selection {
+	background-color: var(--selection);
+  }
+
+  #form-top::selection{
+	background-color: var(--selection);
+	color: var(--white)
+  }
+  #form-bot::selection{
+	background-color: var(--selection);
+	color: var(--white)
+  }
+  #form-image::selection{
+	background-color: var(--selection);
+	color: var(--white)
+  }
+  .meme-form > div {
+	margin-bottom: 10px;
+  }
+  
+  .meme-form input[type="text"],
+  .meme-form input[type="number"],
+  .meme-form select {
+	width: 100%;
+	padding: 8px;
+	border-radius: 3px;
+	border: none;
+	margin-top: 2px;
+  }
+  .meme-form select {
+	height: 32px;
+	background-color: var(--white);
+  }
+  .meme-form select:focus {
+	background-color: var(--white);
+  }
+  .meme-form input[type="text"]:focus,
+  .meme-form input[type="number"]:focus,
+  .meme-form select {
+	outline-color: var(--gray);
+	outline-width: 5px;
+  }
+ 
+  .tooltip {
+	position: relative;
+	cursor: auto;
+	color: var(--white);
+  }
+  
+  .tooltip .tooltiptext {
+	display: inline-block;
+	visibility: hidden;
+	padding: 10px;
+	background-color: var(--black);
+	color: var(--title);
+	border-radius: 6px;
+	text-align: center;
+	width: 109%;
+	position: absolute;
+	z-index: 1;
+	top: -40px;
+	right: -80px;
+	font-size: 12px;
+  }
+  .tooltip .tooltiptext::after{
+	content: "";
+	position: absolute;
+	height: 100px;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 9px;
+	border-style: solid;
+	border-color: black transparent transparent transparent;
+	transform: rotate(0.5deg); /* Coloquei para testar a rotação, contudo funciona sem */
+  }
+  .tooltip:hover .tooltiptext {
+	visibility: visible;
+  }
+  
+  .meme-form__button-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+  }
+  
+  .meme-form button {
+	background-color: var(--button);
+	border: none;
+	padding: 15px;
+	color: var(--white);
+	font-size: 26px;
+	border-radius: 12px;
+	display: block;
+	margin: auto;
+	margin-top: 15px;
+	transition: all .2s;
+	outline: none;
+  }
+  .meme-form button::selection {
+	background-color: var(--selection);
+  }
+  .meme-form button:hover {
+	transform: translateY(-1px);
+	box-shadow: 0px 2px 4px var(--black);
+	background-color: var(--selection);  
+  }
+  .meme-form button:active {
+	transform: translateY(1px);
+	box-shadow: inset 1px 1px 4px var(--shadow);
+  }
+  
+  @media screen and (max-width: 640px) {
+	.main-title {
+	  font-size: 48px;
+	}
+	.canvas-container {
+	margin-right: 0.3px;
+	}
+	.meme-form {
+		margin-top: 50px;
+	}
+  }
+  @media screen and (max-width: 420px) {
+	.main-title {
+	  font-size: 38px;
+	}
+  }
+  
