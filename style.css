@@ -1,9 +1,21 @@
+:root {
+	--purple: #512062; 
+	--white: #fff;
+	--black: #000;
+	--gray: #EAFFDA;
+	--button: #D81E5B;
+	--selection: #9b489a;
+	--title: cyan;
+	--shadow: #c22557;
+}
+
+
 html, body {
 	padding: 6px;
   }
   
   body {
-	background-color: #512062;
+	background-color: var(--purple);
  }
 
   *,
@@ -13,7 +25,7 @@ html, body {
 	}
   
   .main-title {
-	color: #fff;
+	color: var(--white);
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	letter-spacing: 4px;
 	font-size: 60px;
@@ -22,16 +34,16 @@ html, body {
 	text-align: center;
   }
   .main-title::selection {
-	background-color: #9b489a;
+	background-color: var(--selection);
   }
   .meme-container {
 	box-sizing: content-box;
-	border: 15px solid #fff; 
+	border: 15px solid var(--white); 
 	background-image: url(http://i0.kym-cdn.com/photos/images/newsfeed/000/674/934/422.jpg);
 	background-size: 100% 100%;
 	background-position: center center;
 	background-repeat: no-repeat;
-	background-color: #fff;
+	background-color: var(--white);
 	width: 600px;
 	max-width: 600px;
 	height: 480px;
@@ -44,11 +56,11 @@ html, body {
 	font-family: 'Oswald', sans-serif;
 	font-weight: 700;
 	text-transform: uppercase;
-	text-shadow: 2px 2px #000, -2px -2px #000, 2px -2px #000, -2px 2px #000;
+	text-shadow: 2px 2px var(--black), -2px -2px var(--black), 2px -2px var(--black), -2px 2px var(--black);
 	margin-top: 0;
 	margin-bottom: 0;
 	text-align: center;
-	color: #fff;
+	color: var(--white);
 	font-size: 46px;
 	position: absolute;
 	width: 100%;
@@ -63,7 +75,7 @@ html, body {
   
   .canvas-container {
 	margin: auto;
-	border: 15px solid #fff;
+	border: 15px solid var(--white);
 	box-sizing: content-box;
 	width: 600px;
 	height: 480px;
@@ -75,25 +87,25 @@ html, body {
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
-	color: #fff;
+	color: var(--white);
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-size: 18px;
   }
   .meme-form label::selection {
-	background-color: #9b489a;
+	background-color: var(--selection);
   }
 
   #form-top::selection{
-	background-color: #9b489a;
-	color: #fff;
+	background-color: var(--selection);
+	color: var(--white)
   }
   #form-bot::selection{
-	background-color: #9b489a;
-	color: #fff;
+	background-color: var(--selection);
+	color: var(--white)
   }
   #form-image::selection{
-	background-color: #9b489a;
-	color: #fff;
+	background-color: var(--selection);
+	color: var(--white)
   }
   .meme-form > div {
 	margin-bottom: 10px;
@@ -110,30 +122,30 @@ html, body {
   }
   .meme-form select {
 	height: 32px;
-	background-color: #fff;
+	background-color: var(--white);
   }
   .meme-form select:focus {
-	background-color: #fff;
+	background-color: var(--white);
   }
   .meme-form input[type="text"]:focus,
   .meme-form input[type="number"]:focus,
   .meme-form select {
-	outline-color: #EAFFDA;
+	outline-color: var(--gray);
 	outline-width: 5px;
   }
  
   .tooltip {
 	position: relative;
 	cursor: auto;
-	color: #fff;
+	color: var(--white);
   }
   
   .tooltip .tooltiptext {
 	display: inline-block;
 	visibility: hidden;
 	padding: 10px;
-	background-color: #000;
-	color: #00ffff; /* or Cyan */
+	background-color: var(--black);
+	color: var(--title);
 	border-radius: 6px;
 	text-align: center;
 	width: 109%;
@@ -152,7 +164,7 @@ html, body {
 	margin-left: -5px;
 	border-width: 9px;
 	border-style: solid;
-	border-color: black transparent transparent transparent;
+	border-color: var(--black) transparent transparent transparent;
 	transform: rotate(0.5deg); /* Coloquei para testar a rotação, contudo funciona sem */
   }
   .tooltip:hover .tooltiptext {
@@ -166,10 +178,10 @@ html, body {
   }
   
   .meme-form button {
-	background-color: #D81E5B;
+	background-color: var(--button);
 	border: none;
 	padding: 15px;
-	color: #fff;
+	color: var(--white);
 	font-size: 26px;
 	border-radius: 12px;
 	display: block;
@@ -179,15 +191,32 @@ html, body {
 	outline: none;
   }
   .meme-form button::selection {
-	background-color: #9b489a;
+	background-color: var(--selection);
   }
   .meme-form button:hover {
 	transform: translateY(-1px);
-	box-shadow: 0px 2px 4px #000;
-	background-color: #9b489a;  
+	box-shadow: 0px 2px 4px var(--black);
+	background-color: var(--selection);  
   }
   .meme-form button:active {
 	transform: translateY(1px);
-	box-shadow: inset 1px 1px 4px #c22557;
+	box-shadow: inset 1px 1px 4px var(--shadow);
+  }
+  
+  @media screen and (max-width: 640px) {
+	.main-title {
+	  font-size: 48px;
+	}
+	.canvas-container {
+	margin-right: 0.3px;
+	}
+	.meme-form {
+		margin-top: 50px;
+	}
+  }
+  @media screen and (max-width: 420px) {
+	.main-title {
+	  font-size: 38px;
+	}
   }
   
