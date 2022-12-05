@@ -1,33 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald%7COswald:700%7CAnton%7CCoda" media="all">   
   <title>Meme Generator</title>
   </head>
 
   <body translate="no">
   <!-- https://pt.stackoverflow.com/questions/119101/atributo-translate-como-ser%C3%A1-o-uso-desse-futuro-atributo#:~:text=O%20atributo%20translate%20serve%20para,como%20proceder%20com%20aquele%20conte%C3%BAdo. -->
-	<h1>Meme Generator</h1>
-   <div>
-	<p>Header Text</p>
-	<p>Footer Text</p>
+	<h1 class="main-title">Meme Generator</h1>
+  <!-- <div class="meme-container">
+	<p class="meme-text top-text">Header Text</p>
+	<p class="meme-text bot-text">Footer Text</p>
+  </div> -->
+  <div class="canvas-container">
+	<canvas class="meme-canvas" width="600" height="480">
+	</canvas>
   </div>
-  <div>
-  </div>
-  <form>
-	<div>
+  <form class="meme-form">
+	<div class="tooltip">
 	  <label>Top Text</label>
+	  <span class="tooltiptext">Escreva algo nos campos a baixo e clique nos botões para ver o resultado 😁</span>
+	  <input type="text" id="form-top" value="Header text">
 	</div>
 	<div>
 	  <label>Bottom Text</label>
+	  <input type="text" id="form-bot" value="Footer text">
 	</div>
 	<div>
 	  <label>Image URL</label>
+	  <input type="text" id="form-image" value="https://i0.wp.com/www.coliseugeek.com.br/wp-content/uploads/2021/07/Papel-de-parede-gamer-4k-para-seu-pc-1.jpg?resize=1024%2C576&ssl=1">
 	</div>
-	<div>
+	<div class="meme-form__button-container">
+	  <button  id="generate-button">Generate</button>
+	  <button type="button" id="download-button">Download</button>
 	</div>
   </form>
-
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js"></script>
+	<script src="main.js"></script>
+	  <!-- 
+	Caso queira o código js no html digitamos:
+	<script id="script-js"> // ou rendered
+		// E digitamos o código aqui dentro
+	</script> 
+  -->
   </body>
   
   </html>
