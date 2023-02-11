@@ -192,6 +192,7 @@ html, body {
 	margin-top: 15px;
 	transition: all .2s;
 	outline: none;
+	cursor: pointer;
   }
   .meme-form button::selection {
 	background-color: var(--selection);
