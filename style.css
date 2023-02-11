@@ -5,8 +5,9 @@
 	--gray: #EAFFDA;
 	--button: #D81E5B;
 	--selection: #9b489a;
-	--title: cyan;
+	--title: #d146ff;
 	--shadow: #c22557;
+	--focus: #a822d4;
 }
 
 
@@ -44,9 +45,9 @@ html, body {
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-color: var(--white);
-	width: 600px;
-	max-width: 600px;
-	height: 480px;
+	width: 400px;
+	max-width: 400px;
+	height: 400px;
 	margin-left: auto;
 	margin-right: auto;
 	position: absolute;
@@ -77,8 +78,8 @@ html, body {
 	margin: auto;
 	border: 15px solid var(--white);
 	box-sizing: content-box;
-	width: 600px;
-	height: 480px;
+	width: 400px;
+	height: 400px;
 	}
 
   .meme-form {
@@ -119,6 +120,7 @@ html, body {
 	border-radius: 3px;
 	border: none;
 	margin-top: 2px;
+	transition: color 1s;
   }
   .meme-form select {
 	height: 32px;
@@ -130,8 +132,10 @@ html, body {
   .meme-form input[type="text"]:focus,
   .meme-form input[type="number"]:focus,
   .meme-form select {
-	outline-color: var(--gray);
+	outline-color: var(--focus);
 	outline-width: 5px;
+	color: var(--focus);
+	font-style: italic;
   }
  
   .tooltip {
