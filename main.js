@@ -20,8 +20,8 @@ const form = {
 	if (!document.querySelector('.meme-canvas')) {
 	  return
 	}
-	canvas.width = 600
-	canvas.height = 480
+	canvas.width = 400
+	canvas.height = 400
 	
 	generateCanvasMeme()
   }
@@ -35,8 +35,8 @@ const form = {
 	img.crossOrigin = "Anonymous"
 	img.onload = () => {
 	  ctx.clearRect(0, 0, canvas.width, canvas.height)
-	  img.width = 600
-	  img.height = 480
+	  img.width = 400
+	  img.height = 400
 	  ctx.drawImage(img, 0, 0, img.width, img.height)
 	  
 	  ctx.lineWidth = 5
