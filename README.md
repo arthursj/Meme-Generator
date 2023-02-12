@@ -7,7 +7,7 @@
   <a href="#-Technology">Technology</a>
 </p>
 <p align="center">
-    <img src="projeto.png">
+    <img src="meme.png">
 </p>
 
 
